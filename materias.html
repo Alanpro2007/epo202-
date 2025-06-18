@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Materias de la Escuela</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004080;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background-color: #e6f0ff;
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-left: 5px solid #004080;
+      border-radius: 5px;
+    }
+
+    .form-materia {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .form-materia input {
+      padding: 10px;
+      width: 60%;
+      border: 2px solid #004080;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+    }
+
+    .form-materia button {
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .form-materia button:hover {
+      background-color: #003366;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<a class="boton-regresar" href="mejora 4.html">⬅️ Regresar</a>
+
+  <header>
+    <h1>Materias que Verás en la Escuela</h1>
+  </header>
+
+  <main>
+    <h2>Lista de Materias</h2>
+    <ul id="listaMaterias">
+      <li>Matemáticas</li>
+      <li>Lengua y Literatura</li>
+      <li>Historia</li>
+      <li>Física</li>
+      <li>Química</li>
+      <li>Educación Física</li>
+    </ul>
+
+    <div class="form-materia">
+      <input type="text" id="nuevaMateria" placeholder="Escribe una nueva materia">
+      <button onclick="agregarMateria()">Agregar</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Preparatoria 202 © 2025 - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    function agregarMateria() {
+      const input = document.getElementById("nuevaMateria");
+      const materia = input.value.trim();
+
+      if (materia !== "") {
+        const lista = document.getElementById("listaMaterias");
+        const nuevaLi = document.createElement("li");
+        nuevaLi.textContent = materia;
+        lista.appendChild(nuevaLi);
+        input.value = "";
+      } else {
+        alert("Por favor escribe el nombre de la materia.");
+      }
+    }
+  </script>
+
+</body>
+</html>

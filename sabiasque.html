@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Sabías que...? - Escuela</title>
+  <style>
+    :root {
+      --color-fondo: #f9f9f9;
+      --color-texto: #333;
+      --color-acento: #2196f3;
+      --color-tarjeta: #ffffff;
+    }
+
+    body.dark-mode {
+      --color-fondo: #1a1a1a;
+      --color-texto: #eeeeee;
+      --color-acento: #90caf9;
+      --color-tarjeta: #2c2c2c;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      transition: all 0.4s ease;
+    }
+
+    header {
+      background-color: var(--color-acento);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .contenedor {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .tarjeta {
+      background-color: var(--color-tarjeta);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-8px);
+    }
+
+    .tarjeta h3 {
+      color: var(--color-acento);
+    }
+
+    .modo-boton {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: var(--color-acento);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--color-acento);
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="modo-boton" onclick="cambiarModo()">🌙 Cambiar modo</button>
+<a class="boton-regresar" href="mejora 4.html">⬅️ Regresar</a>
+  <header>
+    <h1>¿Sabías que...?</h1>
+    <p>Descubre datos interesantes sobre nuestra escuela</p>
+  </header>
+
+  <main class="contenedor">
+    <div class="tarjeta">
+      <h3>📅 Fundación</h3>
+      <p>La escuela fue fundada en 2010 en Agosto con solo 2 salones y 25 estudiantes.</p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>🏆 Reconocimientos</h3>
+      <p>    </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>📚 Informacion Historica</h3>
+      <p>Históricamente, los hacendados fueron figuras de autoridad en el México rural: hombres de carácter fuerte, presencia dominante y liderazgo firme. fue un reconocimiento simbólico a su actitud serena, observadora y, a la vez, imponente. Así, se convirtió en una figura emblemática</p>
+
+        <p>Desde sus inicios, nuestra escuela enfrentó importantes desafíos materiales: aulas incompletas, escasez de recursos y condiciones poco favorables. Sin embargo, estas dificultades no frenaron el espíritu de superación de alumnos y docentes, quienes respondieron con compromiso, creatividad y unidad.</p>
+
+      <p>La geografía de nuestro entorno se be reflejado en los cerros "El Veró" y "El Cuzda", que flanquean nuestra escuela y simbolizan protección y arraigo.Se be reflejado en el escudo de la epo.En el que hemos aprendido a adaptarnos, resistir y avanzar sin perder nuestra esencia.</p>
+      <p>La escuela  nos recuerda que, al igual que él, nuestra comunidad educativa es capaz de enfrentar cualquier reto con valentía, inteligencia y perseverancia. </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>🎨 Mural Histórico</h3>
+      <p>El mural que se encuentra en la pared de la derecha fue pintado por un maestro y con ayuda de exalumnos para conmemorar los 15 años de la escuela .</p>
+      <p>Las hojas del mural represantar cada año de la istitucion</p>
+    </div>
+
+    <!-- Puedes agregar más tarjetas aquí -->
+  </main>
+
+  <footer>
+    &copy; 2025 Escuela Brillante - Historia Viva
+  </footer>
+
+  <script>
+    function cambiarModo() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+</html>
